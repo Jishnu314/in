@@ -25,6 +25,22 @@ fetch('subfiles/experience.html')
     document.getElementById('experience-section-placeholder').innerHTML = html;
   });
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
 // Wait for the initial HTML document to be fully loaded and parsed.
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -68,43 +84,49 @@ document.addEventListener('DOMContentLoaded', () => {
     /**
      * Sets up the sidebar functionality, including toggle, auto-hide, and outside click.
      */
+    /**
+     * Sets up the sidebar functionality, including toggle, auto-hide, and outside click.
+     */
     function initializeSidebar() {
         if (!toggleBtn || !sidebar) {
             console.warn("Sidebar elements not found. Skipping initialization.");
             return;
         }
 
-        function setHideTimer() {
-            clearTimeout(hideSidebarTimeout); // Clear any existing timer
-            hideSidebarTimeout = setTimeout(() => {
-                sidebar.classList.remove('active');
-            }, 3000); // Hide after 3 seconds of inactivity
-        }
+        // --- Helper function to control the state of the sidebar and toggle button ---
+        const setSidebarActive = (isActive) => {
+            sidebar.classList.toggle('active', isActive);
+            toggleBtn.classList.toggle('hidden', isActive); // Toggle 'hidden' class on the button
+
+            clearTimeout(hideSidebarTimeout); // Always clear previous timer
+            if (isActive) {
+                // Set a new timer only if we are activating the sidebar
+                hideSidebarTimeout = setTimeout(() => {
+                    setSidebarActive(false); // Use our new function to hide it
+                }, 3000);
+            }
+        };
 
         // Show/hide sidebar on toggle button click
         toggleBtn.addEventListener('click', (e) => {
             e.stopPropagation(); // Prevent this click from triggering the document listener
-            sidebar.classList.toggle('active');
-
-            if (sidebar.classList.contains('active')) {
-                setHideTimer(); // Start timer when sidebar opens
-            } else {
-                clearTimeout(hideSidebarTimeout); // Stop timer when it's manually closed
-            }
+            // The new state is the opposite of the current state
+            const shouldBeActive = !sidebar.classList.contains('active');
+            setSidebarActive(shouldBeActive);
         });
 
         // Hide sidebar if clicked outside of it
         document.addEventListener('click', (e) => {
             if (sidebar.classList.contains('active') && !sidebar.contains(e.target)) {
-                sidebar.classList.remove('active');
-                clearTimeout(hideSidebarTimeout);
+                setSidebarActive(false);
             }
         });
 
         // Reset the auto-hide timer on any interaction within the sidebar
         sidebar.addEventListener('mousemove', () => {
             if (sidebar.classList.contains('active')) {
-                setHideTimer();
+                // Re-calling setSidebarActive(true) will reset the timer
+                setSidebarActive(true);
             }
         });
     }
