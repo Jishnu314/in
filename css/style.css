@@ -418,6 +418,9 @@ img, .about-image {
   .link-text {
     display: none;
   }
+  .sidebar-toggle {
+    display: none;
+  }
 }
 
 /* === Large Devices (Laptops) === */
@@ -447,6 +450,9 @@ img, .about-image {
   .sidebar:hover .link-text {
     display: block;
   }
+  .sidebar-toggle {
+    display: none;
+  }
 
 }
 
@@ -468,4 +474,8 @@ img, .about-image {
   .link-text {
     display: none;
   }
+  .sidebar-toggle {
+    display: none;
+  }
 }
+
