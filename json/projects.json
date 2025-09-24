@@ -5,7 +5,7 @@
       "subtitle": "Personal Website",
       "description": "A personal portfolio website built using HTML, CSS, and JavaScript to showcase my projects, skills, and experiences. The website features a clean and modern design, responsive layout for various devices, and interactive elements to enhance user experience. It serves as a digital resume and a platform to connect with potential employers or collaborators.",
       "image": "images/img1.jpg",
-      "link": "https://github.com/Jishnu314"
+      "link": ""
     },
     {
       "title": "Smart Door Lock System",
@@ -16,3 +16,4 @@
     }
   ]
 }
+
