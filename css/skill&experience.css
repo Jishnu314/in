@@ -1,0 +1,122 @@
+/* === Skills Container === */
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+/* === Individual Skill === */
+.skill {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #ebebeb00;
+  border-radius: 16px;
+  padding: 1rem 1.5rem;
+  transition: transform 0.2s;
+  max-width: 90px;
+  
+}
+.skill i {
+  font-size: 2.5rem;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  color: #000000;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+
+.skill:hover .skill-name,
+.skill:focus .skill-name,
+.skill:focus-within .skill-name {
+  opacity: 1;
+  transform: translateY(0);
+}
+.skill-name {
+  font-size: 0.8rem;
+  opacity: 0;
+  transform: translateY(5px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+.skills-experiences-wrapper {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap; /* keeps it responsive */
+
+}
+
+.skills-experiences-wrapper .section-content {
+  flex: 1;
+  min-width: 300px; /* adjust as needed */
+}
+.experience-title {
+  justify-items: flex-start;
+  flex: auto;
+}
+.experience-desc {
+  font-size: 0.9rem;
+  padding-left: 12px;
+}
+.experience-list {
+  padding-left: 24px;
+}
+
+/* === Responsive Styles === */
+
+/* Small Devices */
+@media (max-width: 600px) {
+  .skills-container {
+    flex-direction: row;
+    align-items: center;
+    gap: 16px;
+    padding: 0 1rem;
+  }
+  .skill {
+    max-width: 80px;
+    padding: 0.5rem;
+  }
+  .skill i {
+    font-size: 2rem;
+  }
+  .skill span {
+    font-size: 0.9rem;
+    text-align: center;
+  }
+}
+
+/* Medium Devices */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .skills-container {
+    justify-content: center;
+    gap: 20px;
+  }
+  .skill {
+    max-width: 100px;
+    padding: 1rem;
+  }
+}
+
+/* Large Devices */
+@media (min-width: 1025px) and (max-width: 1440px) {
+  .skills-container {
+    justify-content: center;
+    gap: 24px;
+  }
+  .skill {
+    max-width: 90px;
+  }
+
+}
+/*======= desktop===*/
+@media (min-width: 1441px) {
+  .skill {
+    max-width: 100px;
+  }
+  .skill i {
+    font-size: 3rem;
+  }
+}

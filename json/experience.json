@@ -1,0 +1,16 @@
+{
+  "title": "Experience",
+  "list": [
+    {
+      "company": "SMEC Automation",
+      "highlightColor": "#ff6000",
+      "description": "Completed a valuable internship where I applied academic knowledge in a professional environment, focusing on industrial automation technologies.",
+      "points": [
+        "Gained hands-on experience with Programmable Logic Controllers (PLCs).",
+        "Worked on SCADA system configurations and interface design.",
+        "Collaborated with a team on a live automation project, enhancing my technical and teamwork skills."
+      ]
+    }
+    
+  ]
+}

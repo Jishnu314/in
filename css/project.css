@@ -1,0 +1,157 @@
+/* Main section container */
+#projects {
+    display: block;
+    /* FIX: Replaced unreliable negative padding with negative margin.
+       Using 'vh' units is often more predictable than '%'. */
+    margin-top: -5vh;
+}
+
+/* This container holds the main split-screen layout */
+.projects-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 80vh;
+    /* CLARIFICATION: Assuming the page background is dark (#111) for the gradient */
+    background: linear-gradient(to right, transparent 60%, #fff 40%);
+    position: relative;
+}
+
+/* --- Left Side: Text --- */
+.project-text-content {
+    /* FIX: Adjusted width to prevent overflow. 60% matches the background split. */
+    width: 70%;
+    padding: 0 4rem; /* Add some padding for better spacing */
+    color: #ffffff;
+    z-index: 2;
+}
+
+.project-text-content .project-number {
+    position: absolute;
+    top: 16%;
+    left: 0;
+    transform: translate(-15%, -40%);
+    font-size: 12rem;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.1);
+    z-index: -1;
+}
+
+.project-text-content h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.project-text-content h3 {
+    font-size: 1.2rem;
+    color: #eee;
+    margin: 10px 0;
+}
+
+.project-text-content p {
+    margin: 20px 0;
+    color: #ccc;
+    line-height: 1.6;
+}
+
+.project-text-content .read-more {
+    display: inline-block;
+    padding: 0.75rem 2rem;
+    margin: 10px 0;
+    border: 2px solid #ddd; /* Lighter border for dark background */
+    background: transparent;
+    color: #fff;
+    font-weight: 500;
+    text-decoration: none;
+    transition: background 0.2s, color 0.2s, border-color 0.2s;
+}
+
+.project-text-content .read-more:hover {
+    background: #ff6600;
+    color: #111;
+    border-color: #ff6600;
+}
+
+
+/* --- Right Side: Image --- */
+.project-image-content {
+    /* FIX: Adjusted width to prevent overflow. 40% matches the background split. */
+    width: 80%;
+    height: 100%; /* Make it full height for better alignment */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.project-image-content img {
+    width: 85%; /* Use a percentage of its container */
+    max-width: 500px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+
+/* --- Navigation --- */
+.project-nav {
+    position: absolute;
+    bottom: 10%;
+    right: 50%;
+    /* FIX: Added transform to achieve true horizontal centering */
+    transform: translateX(50%);
+    display: flex;
+    align-items: center; /* Vertically align items in the nav bar */
+    /* FIX: Replaced individual margins with 'gap' for cleaner spacing */
+    gap: 0.8rem;
+    z-index: 10;
+}
+
+/* This targets the dots container you created previously */
+#nav-dots-container {
+    display: flex;
+    gap: 12px;
+}
+
+/* Style for the arrow buttons remains the same, but margin is now handled by 'gap' */
+.project-nav button {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: white;
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.project-nav button:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+/* --- White Scheme for Dots --- */
+
+/* Styling for each individual (inactive) dot */
+.nav-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%; /* Makes it a circle */
+    cursor: pointer;
+    
+    /* Inactive dots have a white border and a transparent center */
+    border: 2px solid rgba(255, 255, 255, 0.7);
+    background-color: transparent;
+
+    /* Smooth transition for hover and active states */
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Add a subtle fill when hovering over an inactive dot */
+.nav-dot:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Style for the currently active dot (solid white) */
+.nav-dot.active {
+    background-color: white;
+    border-color: white; /* Ensure the border is also solid white */
+}

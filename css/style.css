@@ -1,0 +1,502 @@
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Libre+Barcode+39+Extended+Text&family=Playwrite+AU+QLD:wght@100..400&family=Syne+Mono&display=swap');
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: auto;
+}
+
+body {
+  font-family: 'Montserrat', Arial, sans-serif;
+  background: #ffffff;
+  color: #222;
+  line-height: 1.6;
+  padding-left: 80px;
+  transition: padding-left 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+/*================================================= Header styles ================================================================*/
+
+header {
+  width: 100%;
+  padding: 2rem 0 0 0;
+  text-align: center;
+  background: #fff;
+}
+
+nav {
+  margin: 0rem 0;
+}
+
+nav a {
+  color: #222;
+  text-decoration: none;
+  margin: 0 1.5rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  transition: color 0.2s;
+}
+nav a:hover {
+  color: #ff6600;
+}
+.section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 60vh;
+  padding: 4rem 8vw;
+  position: relative;
+  overflow: hidden;
+  
+}
+.section.dark {
+  background: #181818;
+  color: #fff;
+  overflow: hidden;
+
+}
+.section.light {
+  background: #fff;
+  color: #222;
+  overflow: hidden;
+  
+}
+.section-content {
+  max-width: 40vw;
+  justify-content: space-between;
+}
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 1rem;
+}
+
+.section-desc {
+  font-size: 1.05rem;
+  margin-bottom: 2rem;
+}
+.line {
+  display: block;
+  opacity: 0;
+  transform: translateY(20px);
+}
+.section-btn {
+  display: inline-block;
+  padding: 0.75rem 2rem;
+  margin: 10px 0; 
+  border: 2px solid #222;
+  background: transparent;
+  color: inherit;
+  font-weight: 500;
+  letter-spacing: 1px;
+  cursor: pointer;
+  text-decoration: auto;
+  transition: background 0.2s, color 0.2s;
+}
+.section.dark .section-btn {
+  border-color: #ffffff;
+}
+.section-btn:hover {
+  background: #ff6600;
+  color: #fff;
+  border-color: #ff6600;
+}
+.section-img {
+  max-width: 40vw;
+  height: auto;
+  z-index: 1;
+  overflow: hidden;
+}
+
+/* Add this to your CSS for fade-zoom-in if not available */
+[data-aos="fade-zoom-in"] {
+  opacity: 0;
+  transform: scale(0.95);
+  transition-property: transform, opacity;
+}
+
+[data-aos="fade-zoom-in"].aos-animate {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/*================================================= Sidebar styles =================================================================*/
+/* Hide toggle button by default */
+.sidebar-toggle {
+  display: none; /* Keep this to hide on desktop */
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  z-index: 1001;
+  
+  /* Sizing and Alignment */
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  /* Appearance */
+  background: rgba(25, 25, 25, 0.534); /* More solid background */
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px; /* Softer, rounded corners */
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  
+  /* Smooth Transitions */
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.sidebar-toggle.hidden {
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(0.8);
+    transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+}
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 80px; /* Collapsed width */
+  height: 100%;
+  background: #181818;
+  display: flex;
+  flex-direction: column;
+  z-index: 1000;
+  transition: width 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+  overflow-x: hidden;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+}
+.link-text {
+  display: block;
+  margin-left: 8px;
+  font-size: 0.9rem;
+}
+
+.logo {
+  font-family: "Oxanium", sans-serif;
+  color: #ffffff;
+  font-weight: 650;
+  letter-spacing: 1px;
+  padding: 1.5rem 0;
+  text-align: center;
+  font-size: 1.5rem;
+  white-space: nowrap;
+}
+.sidebar-nav {
+  display: flex;
+  gap: 2rem;
+  flex-direction: column;
+  list-style: none; /* Use a list for semantics */
+  padding: 2rem 0;
+  margin: 0;
+  flex-grow: 1; /* Pushes nav items to fill space */
+}
+.sidebar-nav a {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: color 0.2s;
+}
+.sidebar-nav a:hover {
+  color: #ff6600b2;
+  scale: 1.1;
+}
+.sidebar-nav a.active {
+    color: #ff6000; /* or any other color you want */
+    font-weight: bold;
+    scale: 1.1;
+  }
+ 
+  
+/*======================================= home section============================ */
+#home {
+  height: 100vh;
+  min-height: 100vh;
+}
+/* This class targets only the "i'm" part of the title */
+.title-prefix {
+  color: transparent;
+  -webkit-text-stroke: 0.8px #ff6000;
+  font-size: 1.5rem;
+  position: relative;
+  top: -28px;
+}
+
+
+.section-titleH {
+  font-family: 'Neuropol', sans-serif;
+  font-weight: 800;
+  font-size: 3.8rem;
+  font-style: normal;
+  color: rgb(0, 0, 0);
+}
+.scroll-text {
+  position: absolute;
+  right: 4rem;
+  bottom: 2rem;
+  font-size: 0.8rem;
+  color: #888;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+}
+
+spline-viewer {
+  width: 125%;
+  height: 100%;
+  display: block;
+  overflow: hidden;
+}
+/*================================== ABOUT========================*/
+
+.about-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image covers the container */
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.about-image:hover {
+  transform: scale(1.05); /* Slight zoom effect on hover */
+}
+/*================================== CONTACT========================*/
+.contact-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 80vh;
+  height: auto;
+  text-align: center;
+}
+
+.contact-center .section-content,
+.contact-center .section-img {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+
+/* =============================Social Media Icons================================= */
+.icons {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 20px;
+}
+
+.icon {
+  width: 60px;
+  height: 60px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 26px;
+  color: #000000;
+  background-color: transparent;
+  border: 2px solid #000000;
+  transition: 0.25s;
+}
+
+.icon:hover {
+  outline-offset: 4px;
+  animation: shake 0.25s;
+}
+/* LinkedIn */
+.icon--linkedin:hover {
+  background-color: #0077b5;
+  outline: 2px solid #0077b5;
+}
+/* Instagram Hover Effect */
+.icon--instagram:hover {
+  background-image: radial-gradient(circle at 30% 107%, #fdf497 0%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+  outline: 2px solid #d6249f;
+}
+/* GitHub */
+.icon--github:hover {
+  background-color: #394149c4;
+  outline: 2px solid #24292e;
+}
+
+/* Optional Shake Animation for socail media */
+@keyframes shake {
+  0% { transform: rotate(0); }
+  20% { transform: rotate(-15deg); }
+  40% { transform: rotate(15deg); }
+  60% { transform: rotate(-10deg); }
+  80% { transform: rotate(10deg); }
+  100% { transform: rotate(0); }
+}
+/* Make all images responsive */
+img, .about-image {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+
+/* === Small Devices (Mobile Phones) === */
+@media (max-width: 600px) {
+  body {
+    padding-left: 0;
+    padding: 0rem;
+  }
+  .section {
+    flex-direction: column;
+    align-items: center;
+    padding: 3rem 2rem;
+  }
+  .section-content,
+  .section-img {
+    max-width: 100%;
+  }
+  .about-image{
+    max-width: 50%;
+  }
+  #home .section-titleH {
+    padding-top: 30%;
+  }
+  #about .section-title {
+    text-align: center;
+  }
+  .section-desc {
+    text-align: center;
+  }
+  .icon {
+    width: 50px;
+    height: 50px;
+    font-size: 22px;
+  }
+  .sidebar-toggle {
+    display: block;
+  }
+  .logo{
+    display: none;
+  }
+  .sidebar {
+    display: none; /* hide sidebar initially */
+    position: fixed;
+    left: 0;
+    top: 0;
+    padding-top: 20%;
+    height: 100vh;
+    width: 20%;
+    background: #1111119c;
+    z-index: 1000;
+  }
+  .sidebar.active {
+    display: block; /* show when active */
+    width: 200px;
+    transition: width 0.3s;
+  }
+  spline-viewer{
+    display: none;
+  }
+  .scroll-text {
+    right: 1rem;
+  }
+  
+}
+/* === Medium Devices (Tablets) === */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .section {
+    flex-direction: column;
+    padding: 3rem 3rem;
+    text-align: center;
+  }
+  .section-content,
+  .section-img {
+    max-width: 100%;
+  }
+  #home .section-titleH {
+    margin-top: 50%;
+  }
+  .about-image{
+    max-width: 40%;
+  }
+  .icon {
+    width: 55px;
+    height: 55px;
+    font-size: 24px;
+  }
+  spline-viewer{
+    display: none;
+  }
+  .scroll-text {
+    right: 2rem;
+  }
+  
+  .link-text {
+    display: none;
+  }
+  .sidebar-toggle {
+    display: none;
+  }
+}
+
+/* === Large Devices (Laptops) === */
+@media (min-width: 1025px) and (max-width: 1440px) {
+  .section {
+    padding: 4rem 6vw;
+  }
+  .section-title {
+    font-size: 2.8rem;
+  }
+  .section-img {
+    max-width: 40vw;
+  }
+  .about-image{
+    max-width: 80%;
+  }
+  .scroll-text {
+    right: 3rem;
+  }
+  .link-text {
+    display: none;
+  }
+  .sidebar:hover {
+    width: 200px;
+    transition: width 0.3s;
+  }
+  .sidebar:hover .link-text {
+    display: block;
+  }
+  .sidebar-toggle {
+    display: none;
+  }
+
+}
+
+/*=== desktop ===*/
+@media (min-width: 1441px) {
+  .section {
+    padding: 6rem 10vw;
+  }
+  .section-title {
+    font-size: 3rem;
+  }
+  .section-img,
+  .section-content {
+    max-width: 35vw;
+  }
+  .about-image{
+    max-width: 70%;
+  }
+  .link-text {
+    display: none;
+  }
+  .sidebar-toggle {
+    display: none;
+  }
+}
+

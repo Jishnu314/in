@@ -1,0 +1,11 @@
+{
+  "projects": [
+    {
+      "title": "Portfolio",
+      "subtitle": "Personal Website",
+      "description": "Explore a collection of my recent work and projects. For more details and code examples, You can visit my GitHub profile. ",
+      "image": "images/img1.jpg",
+      "link": "https://github.com/Jishnu314"
+    }
+  ]
+}

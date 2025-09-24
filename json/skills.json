@@ -1,0 +1,13 @@
+{
+  "exploreBtn": "Ready to Explore?",
+  "list": [
+    {"name": "HTML5", "iconClass": "fab fa-html5"},
+    {"name": "CSS3", "iconClass": "fab fa-css3-alt"},
+    {"name": "JavaScript", "iconClass": "fab fa-js"},
+    {"name": "Python", "iconClass": "fab fa-python"},
+    {"name": "Inkscape", "iconify": "simple-icons:inkscape"},
+    {"name": "GIMP", "iconify": "simple-icons:gimp"},
+    {"name": "Arduino IDE", "iconify": "simple-icons:arduino"},
+    {"name": "Proteus", "iconify": "simple-icons:proteus"}
+  ]
+}

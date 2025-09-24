@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jishnu's Portfolio</title>
+  <link rel="website icon" type="png" href="images/logo.png">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/skill&experience.css">
+  <link rel="stylesheet" href="css/project.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link href="https://fonts.cdnfonts.com/css/neuropol" rel="stylesheet">
+</head>
+<body>
+
+<!-- Sidebar Toggle Button (Phones Only) -->
+    <button class="sidebar-toggle" id="sidebarToggle"><svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#ffffffe7"><path d="M401.67-480.67 208.67-674l46.66-46.67 240 240-240 240-46.66-46.66 193-193.34Zm256.66 0L465.33-674 512-720.67l240 240-240 240-46.67-46.66 193-193.34Z"/></svg></button>
+    <!-- Sidebar -->
+    <aside class="sidebar" data-aos="fade-right" data-aos-duration="1000" data-aos-offset="0">
+      <div class="logo" style="background-color: transparent;">J<span style="-webkit-text-stroke: 1.8px white; color: transparent;">K</span> </div>
+
+      <nav class="sidebar-nav">
+        <a href="#home" title="Home" data-aos="fade-right" data-aos-delay="250"><i class="ri-home-4-line"></i><span class="link-text">Home</span></a>
+        <a href="#about" title="About" data-aos="fade-right" data-aos-delay="350"><i class="ri-information-line"></i><span class="link-text">About</span></a>
+        <a href="#skills" title="Skills" data-aos="fade-right" data-aos-delay="450"><i class="ri-medal-line"></i><span class="link-text">Skills</span></a>
+        <a href="#projects" title="Projects" data-aos="fade-right" data-aos-delay="550"><i class="ri-folder-image-line"></i><span class="link-text">Projects</span></a>
+        <a href="#contact" title="Contact" data-aos="fade-right" data-aos-delay="650"><i class="ri-contacts-line"></i><span class="link-text">Contact</span></a>
+      </nav>
+    </aside>
+
+<!-- Home Section -->
+<section id="home" class="section light" data-aos="fade-zoom-in" data-aos-duration="1000">
+  <div class="scroll-text">⏏Scroll Down---------</div>
+  <div class="section-content">
+    <h1 class="section-titleH" data-aos="fade-up" data-rellax-speed="-2"><span>i'm</span></h1>
+    <p class="section-desc" data-aos="fade-up" data-aos-delay="200" data-rellax-speed="-1"></p>
+    <a href="#projects" class="section-btn" data-aos="zoom-in" data-aos-delay="400"></a>
+  </div>
+  
+</section>
+
+<!-- About Section -->
+<section id="about" class="section dark" data-aos="fade-up" data-aos-duration="1000" data-aos-offset="200">
+  <div class="section-img" data-aos="zoom-in" data-aos-delay="300" data-rellax-speed="2">
+    <img src="" alt="About Image" class="about-image" style="width: fit-content;">
+  </div>
+  <div class="section-content">
+    <h2 class="section-title" data-aos="zoom-in-up" data-rellax-speed="-1">About Me</h2>
+    <div class="section-desc"><p data-aos="fade-right" data-aos-delay="200"></p></div>
+    <!-- Buttons loaded dynamically -->
+    <a href="#contact" class="section-btn contact-btn" data-aos="zoom-in-left" data-aos-duration="500" data-aos-offset="200"></a>
+    <a href="#projects" class="section-btn projects-btn" data-aos="zoom-in-right" data-aos-duration="500" data-aos-offset="200"></a>
+  </div>
+</section>
+
+
+<!-- Skills & Experience Section -->
+<section id="skills" class="section light" data-aos="fade-up" data-aos-offset="250">
+  <div class="skills-experiences-wrapper">
+
+    <!-- Skills Column -->
+    <div class="section-content" data-aos="zoom-out-right" data-aos-offset="300">
+      <h2 class="section-title skills-title" data-aos="fade-down"></h2>
+      <div id="skills-section-placeholder" class="skills-container" data-aos="fade-up" data-aos-delay="200"></div>
+      <br>
+      <a href="#projects" class="section-btn skills-explore-btn" data-aos="flip-up" data-aos-duration="600" data-aos-delay="250"></a>
+    </div>
+
+    <!-- Experience Column -->
+    <div class="section-content" data-aos="zoom-out-left" data-aos-offset="300">
+      <h2 class="section-title experience-title" data-aos="fade-down"></h2>
+      <div id="experience-section-placeholder" class="skills-container" data-aos="fade-up" data-aos-delay="200">
+        <!-- You can later dynamically add experience details here if needed -->
+      </div>
+    </div>
+    
+  </div>
+</section>
+
+
+
+<!-- Projects Section -->
+<section id="projects" class="section dark" data-aos="fade-up" data-aos-offset="320">
+  <h2 class="section-title" data-aos="fade-up">My Project</h2>
+  <div class="projects-container" id="projects-container">
+    
+    <!-- Left Side: Text -->
+    <div class="project-text-content">
+      <span class="project-number" id="project-number"></span> <h1 id="project-title">Loading...</h1>      <h3 id="project-subtitle"></h3>
+      <p id="project-description">loading...</p>
+      <a href="#" id="read-more-btn" class="read-more">Read More</a>
+    </div>
+
+    <!-- Right Side: Image -->
+    <div class="project-image-content">
+      <img id="project-image" src="" alt="Project">
+    </div>
+  </div>
+  <!-- Navigation -->
+    <div class="project-nav">
+      <button id="prev"><</button>
+      <div id="nav-dots-container"></div>
+      <button id="next">></button>
+    </div>
+</section>
+
+
+<!-- Contact Section -->
+    <section class="section light contact-center" id="contact" data-aos="fade-up" data-aos-duration="800">
+      <div class="section-content">
+        <h2 class="section-title" data-aos="fade-up" data-aos-delay="100">Contact</h2>
+        <p class="section-desc" data-aos="fade-up">Curious about something or want to team up? Say hi!</p>        
+        <a href="mailto:jishnuoffical5@gmail.com" class="section-btn" data-aos="zoom-in" data-aos-delay="300">Email Me</a>
+        <div class="spacer-sm"></div>
+        <a href="resume.pdf" class="section-btn" download data-aos="zoom-in" data-aos-delay="400">Peek at My Resume</a>
+        <div class="spacer-sm"></div>
+        <!-- Social Media Icons -->
+        <div class="icons" data-aos-offset="50" data-aos="fade-up">
+          <a href="https://www.instagram.com/j_shnu?igsh=MW54bXg5NGRtZW10ZA==" target="_blank" rel="noopener noreferrer" class="icon icon--instagram" aria-label="Instagram" data-aos-offset="50" data-aos="fade-up" data-aos-delay="250" >
+            <i class="ri-instagram-line"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/jishnu-k-6b7024255" target="_blank" rel="noopener noreferrer" class="icon icon--linkedin" aria-label="LinkedIn"  data-aos-offset="50" data-aos-delay="350" data-aos="fade-up">
+            <i class="ri-linkedin-line"></i>
+          </a>
+          <a href="https://github.com/Jishnu314" target="_blank" rel="noopener noreferrer" class="icon icon--github" aria-label="GitHub" data-aos-offset="50" data-aos-delay="450" data-aos="fade-up" >
+            <i class="ri-github-line"></i>
+          </a>
+          <!--
+          <a href="https://www.reddit.com/u/Flashy_Constant_6448/s/zKh5tZSENe" target="_blank" rel="noopener noreferrer" class="icon icon--reddit" aria-label="Reddit" data-aos-delay="450" data-aos="fade-up">
+            <i class="ri-reddit-line"></i>
+          </a>-->
+        </div>
+      </div>
+    </section>
+
+<!-- Footer -->
+    <footer class="footer" style="text-align:center; padding: 1rem 0; background: #ffffff; color: #000000;">
+      &copy; 2025 Jishnu. All rights reserved.
+    </footer>
+<!-- Scripts -->
+<script src="script.js"></script>
+<script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/rellax@1.12.1/rellax.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script type="module" src="https://unpkg.com/@splinetool/viewer@1.10.32/build/spline-viewer.js"></script>
+
+<script>
+  AOS.init({ duration: 800, offset: 200 });
+  var rellax = new Rellax('.rellax', { speed: -2, easing: 'ease-in-out', center: true, mirror: false, round: true, vertical: true, horizontal: false });
+
+  fetch('json/texts.json')
+    .then(response => response.json())
+    .then(data => {
+      // Home
+      const titleElement = document.querySelector('.section-titleH');
+      const fullTitle = data.home.title; // This is " i'm JISHNU K"
+
+      // Split the title into two parts
+      const parts = fullTitle.trim().split(' ');
+      const prefix = parts[0]; // "i'm"
+      const mainName = parts.slice(1).join(' '); // "JISHNU K"
+
+      // Use innerHTML to add the text with a styled <span> tag
+      titleElement.innerHTML = `<span class="title-prefix">${prefix}</span> ${mainName}`;      
+      document.querySelector('.section-desc').textContent = data.home.subtitle;
+      document.querySelector('.section-btn[href="#projects"]').textContent = data.home.button;
+
+      // About section texts
+      document.querySelector('#about .section-desc p').textContent = data.about.description;
+      document.querySelector('#about .section-btn[href="#contact"]').textContent = data.about.contactBtn;
+      document.querySelector('#about .section-btn[href="#projects"]').textContent = data.about.projectsBtn;
+
+      // About section image
+      document.querySelector('#about .section-img img').src = data.about.image;
+
+      // Skills
+      document.querySelector('#skills .section-btn').textContent = data.skills.exploreBtn;
+
+      // Projects
+      document.querySelector('#projects .section-title').textContent = data.projects.title;
+
+      })
+    .catch(err => console.error("Error loading texts.json:", err));
+</script>
+
+</body>
+</html>
