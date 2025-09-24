@@ -3,9 +3,16 @@
     {
       "title": "Portfolio",
       "subtitle": "Personal Website",
-      "description": "Explore a collection of my recent work and projects. For more details and code examples, You can visit my GitHub profile. ",
+      "description": "A personal portfolio website built using HTML, CSS, and JavaScript to showcase my projects, skills, and experiences. The website features a clean and modern design, responsive layout for various devices, and interactive elements to enhance user experience. It serves as a digital resume and a platform to connect with potential employers or collaborators.",
       "image": "images/img1.jpg",
       "link": "https://github.com/Jishnu314"
+    },
+    {
+      "title": "Smart Door Lock System",
+      "subtitle": "Facial Recognition Based",
+      "description": "A smart door lock system that uses facial recognition technology to enhance home security. The system is built using a Esp32 cam module, and a Solenoid Electromagnetic Lock  mechanism. It employs machine learning algorithms to recognize authorized users and grant access accordingly, and for unauthorized access attempts, it sends an alert to the homeowner's mobile device.",
+      "image": "images/img2.jpg",
+      "link": ""
     }
   ]
 }
