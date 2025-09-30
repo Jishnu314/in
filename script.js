@@ -258,7 +258,8 @@ fetch('json/social.json')
   .catch(err => console.error('Error loading social icons:', err));
 
   //sidedbar toggle button (phones only)
-   document.addEventListener('DOMContentLoaded', () => {
+  // Sidedbar toggle button (phones only)
+document.addEventListener('DOMContentLoaded', () => {
     const sidebar = document.querySelector('.sidebar');
     const sidebarToggle = document.querySelector('.sidebar-toggle');
     let autoHideTimer; // Variable to hold our timer
@@ -268,23 +269,18 @@ fetch('json/social.json')
         return;
     }
 
-    // --- Core Functions ---
-
     const openSidebar = () => {
         sidebar.classList.add('active');
-        // Start a 3-second timer to auto-hide the sidebar
+        sidebarToggle.style.display = 'none'; // <-- ADD THIS LINE to hide the button
         autoHideTimer = setTimeout(closeSidebar, 3000);
     };
 
     const closeSidebar = () => {
         sidebar.classList.remove('active');
-        // IMPORTANT: Always clear the timer when closing
+        sidebarToggle.style.display = ''; // <-- ADD THIS LINE to show the button again
         clearTimeout(autoHideTimer);
     };
 
-    // --- Event Listeners ---
-
-    // 1. Toggle button click
     sidebarToggle.addEventListener('click', (event) => {
         event.stopPropagation(); // Prevents the document click listener from firing
         if (sidebar.classList.contains('active')) {
@@ -294,7 +290,6 @@ fetch('json/social.json')
         }
     });
 
-    // 2. Pause auto-hide when mouse is over the sidebar
     sidebar.addEventListener('mouseenter', () => {
         clearTimeout(autoHideTimer); // Pause the timer
     });
