@@ -1,28 +1,22 @@
-/* Main section container */
 #projects {
     display: block;
-    /* FIX: Replaced unreliable negative padding with negative margin.
-       Using 'vh' units is often more predictable than '%'. */
     margin-top: -5vh;
 }
-
-/* This container holds the main split-screen layout */
 .projects-container {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     height: 80vh;
-    /* CLARIFICATION: Assuming the page background is dark (#111) for the gradient */
+    max-height: 100vh;
     background: linear-gradient(to right, transparent 60%, #fff 40%);
     position: relative;
 }
 
-/* --- Left Side: Text --- */
+
 .project-text-content {
-    /* FIX: Adjusted width to prevent overflow. 60% matches the background split. */
     width: 70%;
-    padding: 0 4rem; /* Add some padding for better spacing */
+    padding: 0 4rem; 
     color: #ffffff;
     z-index: 2;
 }
@@ -72,46 +66,32 @@
     color: #111;
     border-color: #ff6600;
 }
-
-
-/* --- Right Side: Image --- */
 .project-image-content {
-    /* FIX: Adjusted width to prevent overflow. 40% matches the background split. */
     width: 80%;
-    height: 100%; /* Make it full height for better alignment */
+    height: 100%; 
     display: flex;
     justify-content: center;
     align-items: center;
 }
-
 .project-image-content img {
-    width: 85%; /* Use a percentage of its container */
+    width: 85%; 
     max-width: 500px;
     box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
 }
-
-
-/* --- Navigation --- */
 .project-nav {
     position: absolute;
     bottom: 10%;
     right: 50%;
-    /* FIX: Added transform to achieve true horizontal centering */
     transform: translateX(50%);
     display: flex;
-    align-items: center; /* Vertically align items in the nav bar */
-    /* FIX: Replaced individual margins with 'gap' for cleaner spacing */
+    align-items: center; 
     gap: 0.8rem;
     z-index: 10;
 }
-
-/* This targets the dots container you created previously */
 #nav-dots-container {
     display: flex;
     gap: 12px;
 }
-
-/* Style for the arrow buttons remains the same, but margin is now handled by 'gap' */
 .project-nav button {
     background: transparent;
     border: none;
@@ -124,34 +104,62 @@
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
-
 .project-nav button:hover {
     background-color: rgba(255, 255, 255, 0.1);
 }
-/* --- White Scheme for Dots --- */
-
-/* Styling for each individual (inactive) dot */
 .nav-dot {
     width: 12px;
     height: 12px;
-    border-radius: 50%; /* Makes it a circle */
+    border-radius: 50%; 
     cursor: pointer;
-    
-    /* Inactive dots have a white border and a transparent center */
     border: 2px solid rgba(255, 255, 255, 0.7);
     background-color: transparent;
-
-    /* Smooth transition for hover and active states */
     transition: background-color 0.3s ease, border-color 0.3s ease;
 }
-
-/* Add a subtle fill when hovering over an inactive dot */
 .nav-dot:hover {
     background-color: rgba(255, 255, 255, 0.3);
 }
-
-/* Style for the currently active dot (solid white) */
 .nav-dot.active {
     background-color: white;
-    border-color: white; /* Ensure the border is also solid white */
+    border-color: white;
+}
+@media (max-width: 600px) {
+  .projects-container {
+    flex-direction: column;
+    height: auto;
+    background:none;
+    padding-bottom : 12vh;
+  }
+  .project-text-content {
+    width: 100%;
+    padding: 1rem;
+    text-align: left;
+    position: static;
+    
+  }
+}
+@media (min-width: 600px) and (max-width: 900px) {
+   .projects-container {
+    flex-direction: column;
+    height: auto;
+    background:none;
+    padding-bottom : 12vh;
+    }
+    .project-text-content{
+    width: 100%;
+    padding: 1rem;
+    text-align: left;
+    }
+}
+@media (min-width: 900px) and (max-width: 1200px) {
+    .projects-container{
+        padding-bottom: 12vh;
+    }
+    .project-text-content {
+        text-align: left;
+        width: 85%;
+    }
+    .project-image-content {
+        width: 100%;
+    }
 }

@@ -126,7 +126,7 @@ nav a:hover {
 /*================================================= Sidebar styles =================================================================*/
 /* Hide toggle button by default */
 .sidebar-toggle {
-  display: none; /* Keep this to hide on desktop */
+  display: none;
   position: fixed;
   top: 15px;
   left: 15px;
@@ -140,14 +140,12 @@ nav a:hover {
   justify-content: center;
   
   /* Appearance */
-  background: rgba(25, 25, 25, 0.534); /* More solid background */
+  background: rgba(25, 25, 25, 0.534); 
   color: #ffffff;
   border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 12px; /* Softer, rounded corners */
+  border-radius: 12px; 
   cursor: pointer;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  
-  /* Smooth Transitions */
   transition: background-color 0.2s ease, transform 0.2s ease;
 }
 
@@ -161,7 +159,7 @@ nav a:hover {
   position: fixed;
   top: 0;
   left: 0;
-  width: 80px; /* Collapsed width */
+  width: 80px; 
   height: 100%;
   background: #181818;
   display: flex;
@@ -191,10 +189,10 @@ nav a:hover {
   display: flex;
   gap: 2rem;
   flex-direction: column;
-  list-style: none; /* Use a list for semantics */
+  list-style: none; 
   padding: 2rem 0;
   margin: 0;
-  flex-grow: 1; /* Pushes nav items to fill space */
+  flex-grow: 1; 
 }
 .sidebar-nav a {
   display: flex;
@@ -209,7 +207,7 @@ nav a:hover {
   scale: 1.1;
 }
 .sidebar-nav a.active {
-    color: #ff6000; /* or any other color you want */
+    color: #ff6000; 
     font-weight: bold;
     scale: 1.1;
   }
@@ -220,7 +218,6 @@ nav a:hover {
   height: 100vh;
   min-height: 100vh;
 }
-/* This class targets only the "i'm" part of the title */
 .title-prefix {
   color: transparent;
   -webkit-text-stroke: 0.8px #ff6000;
@@ -256,15 +253,15 @@ spline-viewer {
 /*================================== ABOUT========================*/
 
 .about-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* Ensures the image covers the container */
+  width: 70%;
+  height: 70%;
+  object-fit: cover; 
   display: block;
   transition: transform 0.3s ease;
 }
 
 .about-image:hover {
-  transform: scale(1.05); /* Slight zoom effect on hover */
+  transform: scale(1.05); 
 }
 /*================================== CONTACT========================*/
 .contact-center {
@@ -291,6 +288,7 @@ spline-viewer {
   justify-content: center;
   gap: 25px;
   margin-top: 20px;
+  
 }
 
 .icon {
@@ -299,33 +297,24 @@ spline-viewer {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  border-radius: 50%;
   font-size: 26px;
+  border-radius: 50;
+  border-color: #000000;
   color: #000000;
-  background-color: transparent;
-  border: 2px solid #000000;
+  border-radius: 50%;
+  background-color: #ffffff;
+  border: 1px solid #000000;
   transition: 0.25s;
 }
+
 
 .icon:hover {
   outline-offset: 4px;
   animation: shake 0.25s;
+  background-color: transparent;
+  
 }
-/* LinkedIn */
-.icon--linkedin:hover {
-  background-color: #0077b5;
-  outline: 2px solid #0077b5;
-}
-/* Instagram Hover Effect */
-.icon--instagram:hover {
-  background-image: radial-gradient(circle at 30% 107%, #fdf497 0%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
-  outline: 2px solid #d6249f;
-}
-/* GitHub */
-.icon--github:hover {
-  background-color: #394149c4;
-  outline: 2px solid #24292e;
-}
+
 
 /* Optional Shake Animation for socail media */
 @keyframes shake {
@@ -384,7 +373,7 @@ img, .about-image {
     display: none;
   }
   .sidebar {
-    display: none; /* hide sidebar initially */
+    display: none;
     position: fixed;
     left: 0;
     top: 0;
@@ -395,10 +384,9 @@ img, .about-image {
     z-index: 1000;
   }
   .sidebar.active {
-    display: block; /* show when active */
-    width: 200px;
-    transition: width 0.3s;
-  }
+  display: flex;
+  width: 200px; 
+}
   spline-viewer{
     display: none;
   }
