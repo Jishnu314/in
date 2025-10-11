@@ -37,6 +37,7 @@
 }
 .skill-name {
   font-size: 0.8rem;
+  text-align: center;
   opacity: 0;
   transform: translateY(5px);
   transition: opacity 0.3s ease, transform 0.3s ease;

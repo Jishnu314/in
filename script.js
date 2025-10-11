@@ -27,7 +27,7 @@ fetch('json/skills.json')
     document.querySelector('.skills-title').textContent = "Skills";
   })
   .catch(err => console.error("Error loading skills.json:", err));
-
+  
 // Load Experience
 fetch('json/experience.json')
   .then(res => res.json())

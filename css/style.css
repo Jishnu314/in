@@ -155,6 +155,7 @@ nav a:hover {
     transform: scale(0.8);
     transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
 }
+
 .sidebar {
   position: fixed;
   top: 0;
@@ -216,7 +217,7 @@ nav a:hover {
 /*======================================= home section============================ */
 #home {
   height: 100vh;
-  min-height: 100vh;
+  min-height: 95vh;
 }
 .title-prefix {
   color: transparent;
@@ -255,13 +256,13 @@ spline-viewer {
 .about-image {
   width: 70%;
   height: 70%;
-  object-fit: cover; 
+  object-fit: cover;
   display: block;
   transition: transform 0.3s ease;
 }
 
 .about-image:hover {
-  transform: scale(1.05); 
+  transform: translateY(-10px);
 }
 /*================================== CONTACT========================*/
 .contact-center {
