@@ -5,9 +5,10 @@
     {"name": "CSS3", "iconClass": "fab fa-css3-alt"},
     {"name": "JavaScript", "iconClass": "fab fa-js"},
     {"name": "Python", "iconClass": "fab fa-python"},
+    {"name": "C programming", "iconify": "simple-icons:c"},
     {"name": "Inkscape", "iconify": "simple-icons:inkscape"},
-    {"name": "GIMP", "iconify": "simple-icons:gimp"},
     {"name": "Arduino IDE", "iconify": "simple-icons:arduino"},
-    {"name": "Proteus", "iconify": "simple-icons:proteus"}
+    {"name": "Vs code" , "iconify": "simple-icons:visualstudiocode"},
+    {"name": "Assembly Language", "iconify": "simple-icons:assemblyscript"} 
   ]
 }
