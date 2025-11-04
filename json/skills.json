@@ -7,8 +7,10 @@
     {"name": "Python", "iconClass": "fab fa-python"},
     {"name": "C programming", "iconify": "simple-icons:c"},
     {"name": "Inkscape", "iconify": "simple-icons:inkscape"},
-    {"name": "Arduino IDE", "iconify": "simple-icons:arduino"},
     {"name": "Vs code" , "iconify": "simple-icons:visualstudiocode"},
-    {"name": "Assembly Language", "iconify": "simple-icons:assemblyscript"} 
+    {"name": "Assembly Language", "iconify": "simple-icons:assemblyscript"},
+    {"name": "MATLAB", "iconify": "devicon-plain:matlab" },
+    {"name": "Proteus", "iconify": "simple-icons:proteus" },
+    {"name": "CodeSys", "iconify": "simple-icons:codesys" }
   ]
 }

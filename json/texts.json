@@ -1,11 +1,11 @@
 {
   "home": {
     "title": " I'm JISHNU",
-    "subtitle": "“ Standing on the shoulders of early innovators in electronics to reach for a future of bio-integrated devices. ”",
+    "subtitle": "“ Standing on the shoulders of early innovators to build the future of autonomous systems.”",
     "button": "Explore Projects"
   },
   "about": {
-    "description": "“ I am a dedicated Applied Electronics and Instrumentation student at Government Engineering College, Kozhikode (GECK), with a passion for bridging the gap between hardware and software. My work is driven by a desire to create innovative solutions for real-world problems. I've engineered a smart door lock system with facial recognition and am currently developing a drone-based vehicle detection system. I am constantly exploring new technologies to build meaningful and efficient tech experiences. ”",
+    "description": "“ I am a dedicated Applied Electronics and Instrumentation student at Government Engineering College, Kozhikode (GECK), with a passion for bridging hardware and software. My work is driven by a desire to create innovative solutions for real-world problems. I've engineered a smart door lock system with facial recognition and am currently developing smart assistive spectacles for blind people. I am constantly exploring new technologies to build meaningful tech experiences. ”",
     "contactBtn": "Contact Me",
     "projectsBtn": "Explore My Work",
     "image": "images/About-img.png"
@@ -17,7 +17,7 @@
       "label": "Email Me"
     },
     "resume": {
-      "file": "resume.pdf",
+      "file": "files/Resume.pdf",
       "label": "Peek at My Resume"
     }
   }
