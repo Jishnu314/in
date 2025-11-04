@@ -224,6 +224,9 @@ fetch('json/texts.json')
   })
   .catch(err => console.error('Error loading texts.json:', err));
 
+
+  
+
 // Load Social Icons
 fetch('json/social.json')
   .then(response => response.json())
@@ -238,11 +241,25 @@ fetch('json/social.json')
         a.rel = 'noopener noreferrer';
         a.setAttribute('aria-label', icon.ariaLabel);
         a.className = 'icon';
-        if (icon.style) {
-          a.setAttribute('style', icon.style);
-        } else if (icon.bgColor) {
+
+        // Apply background color if it exists
+        if (icon.bgColor) {
           a.style.backgroundColor = icon.bgColor;
         }
+
+        // Apply custom inline style string if it exists
+        if (icon.style) {
+          a.style.cssText += icon.style; 
+        }
+
+        // --- THIS IS THE NEW PART ---
+        // Apply the border-color from JSON as a CSS variable
+        // The CSS will use this variable only on :hover
+        if (icon.borderColor) {
+          a.style.setProperty('--hover-outline-color', icon.borderColor);
+        }
+        // --- END OF NEW PART ---
+        
         a.setAttribute('data-aos-offset', '50');
         a.setAttribute('data-aos', 'fade-up');
         a.setAttribute('data-aos-delay', 250 + idx * 100);
@@ -256,6 +273,10 @@ fetch('json/social.json')
     }
   })
   .catch(err => console.error('Error loading social icons:', err));
+
+
+
+
 
   //sidedbar toggle button (phones only)
   // Sidedbar toggle button (phones only)

@@ -1,18 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Libre+Barcode+39+Extended+Text&family=Playwrite+AU+QLD:wght@100..400&family=Syne+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Iceberg&display=swap');
+
+
 /* Reset and base styles */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+ 
 }
 html {
   scroll-behavior: auto;
+  
 }
 
 body {
   font-family: 'Montserrat', Arial, sans-serif;
   background: #ffffff;
   color: #222;
+  border-radius: 50px;
   line-height: 1.6;
   padding-left: 80px;
   transition: padding-left 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
@@ -95,15 +101,12 @@ nav a:hover {
   cursor: pointer;
   text-decoration: auto;
   transition: background 0.2s, color 0.2s;
+  overflow: hidden;
 }
 .section.dark .section-btn {
   border-color: #ffffff;
 }
-.section-btn:hover {
-  background: #ff6600;
-  color: #fff;
-  border-color: #ff6600;
-}
+
 .section-img {
   max-width: 40vw;
   height: auto;
@@ -212,13 +215,26 @@ nav a:hover {
     font-weight: bold;
     scale: 1.1;
   }
- 
+.section-btn:hover {
+  background: #ff6600;
+  color: #fff;
+  border-color: #ff6600;
+  overflow: hidden;
+  
+}
+
+
   
 /*======================================= home section============================ */
 #home {
-  height: 100vh;
-  min-height: 95vh;
+  max-height: 98vh;
+  min-height:95vh;
 }
+
+
+/*================================== Title Prefix========================*/
+
+
 .title-prefix {
   color: transparent;
   -webkit-text-stroke: 0.8px #ff6000;
@@ -234,6 +250,14 @@ nav a:hover {
   font-size: 3.8rem;
   font-style: normal;
   color: rgb(0, 0, 0);
+  
+  /*font-family: "Iceberg", sans-serif;
+  font-size: 4.5rem;
+  font-weight: 800;
+  color: #000000;
+  margin-bottom: 1rem;
+  */
+  
 }
 .scroll-text {
   position: absolute;
@@ -245,12 +269,19 @@ nav a:hover {
   transform: rotate(180deg);
 }
 
-spline-viewer {
-  width: 125%;
-  height: 100%;
+.home-image {
+  width: 32%;
+  padding-top: 145px;
+  height: auto;
+  object-position: bottom;
+  position: relative;
+  object-fit: cover;
   display: block;
-  overflow: hidden;
+  transition: transform 0.3s ease;  
+  z-index: -2;
+  display: none;
 }
+
 /*================================== ABOUT========================*/
 
 .about-image {
@@ -264,6 +295,8 @@ spline-viewer {
 .about-image:hover {
   transform: translateY(-10px);
 }
+/*================================== SKILLS========================*/
+
 /*================================== CONTACT========================*/
 .contact-center {
   display: flex;
@@ -299,13 +332,17 @@ spline-viewer {
   align-items: center;
   justify-content: center;
   font-size: 26px;
-  border-radius: 50;
-  border-color: #000000;
   color: #000000;
   border-radius: 50%;
   background-color: #ffffff;
   border: 1px solid #000000;
-  transition: 0.25s;
+  
+
+  outline: 2px solid transparent;
+  outline-offset: 0px;
+
+  /* 2. Animate the outline properties, not just 'transition: 0.25s' */
+  transition: background-color 0.25s, outline-offset 0.25s, outline-color 0.25s;
 }
 
 
@@ -313,7 +350,7 @@ spline-viewer {
   outline-offset: 4px;
   animation: shake 0.25s;
   background-color: transparent;
-  
+  outline-color: var(--hover-outline-color, #000000);
 }
 
 
@@ -344,6 +381,7 @@ img, .about-image {
   .section {
     flex-direction: column;
     align-items: center;
+    text-align: left;
     padding: 3rem 2rem;
   }
   .section-content,
@@ -353,15 +391,23 @@ img, .about-image {
   .about-image{
     max-width: 50%;
   }
+  #home .section{
+    max-height: 80vh;
+  }
+  
   #home .section-titleH {
     padding-top: 30%;
   }
   #about .section-title {
     text-align: center;
   }
-  .section-desc {
+  #contact .section-title {
     text-align: center;
   }
+  #contact .section-desc {
+    text-align: center;
+  }
+  
   .icon {
     width: 50px;
     height: 50px;
@@ -387,9 +433,6 @@ img, .about-image {
   .sidebar.active {
   display: flex;
   width: 200px; 
-}
-  spline-viewer{
-    display: none;
   }
   .scroll-text {
     right: 1rem;
@@ -418,19 +461,16 @@ img, .about-image {
     height: 55px;
     font-size: 24px;
   }
-  spline-viewer{
-    display: none;
-  }
   .scroll-text {
     right: 2rem;
   }
-  
   .link-text {
     display: none;
   }
   .sidebar-toggle {
     display: none;
   }
+  
 }
 
 /* === Large Devices (Laptops) === */
@@ -463,6 +503,9 @@ img, .about-image {
   .sidebar-toggle {
     display: none;
   }
+  .home-image {
+    display: block;
+  }
 
 }
 
@@ -487,5 +530,7 @@ img, .about-image {
   .sidebar-toggle {
     display: none;
   }
+  .home-image {
+    display: block;
+  }
 }
-

@@ -9,13 +9,12 @@
     align-items: center;
     height: 80vh;
     max-height: 100vh;
-    background: linear-gradient(to right, transparent 60%, #fff 40%);
     position: relative;
 }
 
 
 .project-text-content {
-    width: 70%;
+    width: 83%;
     padding: 0 4rem; 
     color: #ffffffcd;
     z-index: 2;
@@ -35,6 +34,7 @@
 .project-text-content h1 {
     font-size: 2.5rem;
     font-weight: bold;
+    z-index: 999;
 }
 
 .project-text-content h3 {
@@ -78,6 +78,7 @@
     max-width: 500px;
     box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
 }
+
 .project-nav {
     position: absolute;
     bottom: 10%;

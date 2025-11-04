@@ -39,7 +39,9 @@
     <p class="section-desc" data-aos="fade-up" data-aos-delay="200" data-rellax-speed="-1"></p>
     <a href="#projects" class="section-btn" data-aos="zoom-in" data-aos-delay="400"></a>
   </div>
-  
+  <img src="images/Gemini_Generated_Image_zexa9lzexa9lzexa.jpg" alt="Decorative Image" class="home-image" data-aos="zoom-in" data-aos-delay="600" data-rellax-speed="3">
+
+
 </section>
 
 <!-- About Section -->
@@ -58,15 +60,15 @@
 
 
 <!-- Skills & Experience Section -->
-<section id="skills" class="section light" data-aos="fade-up" data-aos-offset="250">
+<section id="skills" class="section light" data-aos="fade-up" data-aos-offset="250" style="flex-direction: column;">
   <div class="skills-experiences-wrapper">
 
     <!-- Skills Column -->
     <div class="section-content" data-aos="zoom-out-right" data-aos-offset="300">
-      <h2 class="section-title skills-title" data-aos="fade-down"></h2>
+      <h2 class="section-title skills-title" data-aos="fade-down">Skills</h2>
       <div id="skills-section-placeholder" class="skills-container" data-aos="fade-up" data-aos-delay="200"></div>
-      <br>
-      <a href="#projects" class="section-btn skills-explore-btn" data-aos="flip-up" data-aos-duration="600" data-aos-delay="250"></a>
+        <a href="#projects" class="section-btn skills-explore-btn" data-aos="flip-up" data-aos-duration="600" data-aos-delay="250"></a>
+
     </div>
 
     <!-- Experience Column -->
@@ -76,7 +78,7 @@
         <!-- You can later dynamically add experience details here if needed -->
       </div>
     </div>
-    
+
   </div>
 </section>
 
@@ -84,10 +86,8 @@
 
 <!-- Projects Section -->
 <section id="projects" class="section dark" data-aos="fade-up" data-aos-offset="320">
-  <h2 class="section-title" data-aos="fade-up">My Project</h2>
+  <h2 class="section-title" data-aos="fade-up">Projects</h2>
   <div class="projects-container" id="projects-container">
-    
-    <!-- Left Side: Text -->
     <div class="project-text-content">
       <span class="project-number" id="project-number"></span> <h1 id="project-title">Loading...</h1>      <h3 id="project-subtitle"></h3>
       <p id="project-description">loading...</p>
@@ -95,6 +95,8 @@
     </div>
 
     <!-- Right Side: Image -->
+     
+
     <div class="project-image-content">
       <img id="project-image" src="" alt="Project">
     </div>
@@ -127,6 +129,7 @@
 <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/rellax@1.12.1/rellax.min.js"></script>
 <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js"></script>
 
 <script>
   AOS.init({ duration: 800, offset: 200 });
@@ -166,6 +169,7 @@
       })
     .catch(err => console.error("Error loading texts.json:", err));
 </script>
+
 
 </body>
 </html>
