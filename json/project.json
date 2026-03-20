@@ -1,0 +1,30 @@
+[
+  {
+    "title": "Portfolio",
+    "tags": "HTML · CSS · JavaScripts",
+    "desc": "A personal website designed to showcase my projects, technical skills, and experience in a clean and engaging way. Built using responsive design principles, it ensures smooth performance and accessibility across desktops, tablets, and mobile devices for an optimal user experience.",
+    "image": "images/website.png",
+    "github": "https://github.com/Jishnu314/in"
+  },
+  {
+    "title": "Smart Door",
+    "tags": "IoT  · C++ · Esp32",
+    "desc": "An ESP32-based smart doorbell that activates face recognition when the bell is pressed, auto-unlocks for saved faces, and alerts the owner with a photo for unknown visitors.",
+    "image": "images/Smart door.png",
+    "github": "https://github.com/Jishnu314/Smart-Door-IoT-project"
+  },
+  {
+    "title": "Smart Specs For Blind (In Progress)",
+    "tags": "Rpi · Python",
+    "desc": "Assistive smart spectacles for visually impaired users that use object detection to recognize surroundings in real time. Converts visual information into audio feedback, helping users navigate safely, avoid obstacles, and understand their environment independently.",
+    "features": ["Face recognition", "AI assistance", "Smart shop assistant", "Emergency call"],
+    "image": "images/Smart specs.png",
+    "github": "https://github.com/Jishnu314/Smart-Specs-For-Blind"
+  },
+  {
+    "title": "Industrial Robo Arm (In Progress)",
+    "tags": "Robotics",
+    "desc": "A robotic arm that memorizes and repeats specific paths. Useful for automating repetitive tasks in industrial settings.",
+    "image": "images/robotic arm.jpeg"
+  }
+]

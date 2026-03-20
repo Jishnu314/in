@@ -1,154 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jishnu's Portfolio</title>
-    <link rel="website icon" type="png" href="images/logo.png"> <!-- Favicon -->
-    <link rel="stylesheet" href="css/style.css">  
-    <link rel="stylesheet" href="css/skill&experience.css">
-    <link rel="stylesheet" href="css/project.css"> <!-- Project CSS -->
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">      <!-- Google Fonts -->
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">             <!-- Remix Icons(social media) -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">    <!-- Font Awesome(for skill) -->
-    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">           <!-- AOS CSS -->
-    <link href="https://fonts.cdnfonts.com/css/neuropol" rel="stylesheet">           <!-- Neuropol Font -->
+    <title>Jishnu K | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    
+</head>
+<body>
 
-  </head>
-  <body>
+     <!-- ADD side-nav OUTSIDE .wrapper, before it -->
 
-    <!-- Sidebar Toggle Button (Phones Only) -->
-    <button class="sidebar-toggle" id="sidebarToggle"><svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#ffffffe7"><path d="M401.67-480.67 208.67-674l46.66-46.67 240 240-240 240-46.66-46.66 193-193.34Zm256.66 0L465.33-674 512-720.67l240 240-240 240-46.67-46.66 193-193.34Z"/></svg></button>
-    <!-- Sidebar -->
-    <aside class="sidebar" data-aos="fade-right" data-aos-duration="1000" data-aos-offset="0">
-      <div class="logo" style="background-color: transparent;">J<span style="-webkit-text-stroke: 1.8px white; color: transparent;">K</span> </div>
 
-      <nav class="sidebar-nav">
-        <a href="#home" title="Home" data-aos="fade-right" data-aos-delay="250"><i class="ri-home-4-line"></i><span class="link-text">Home</span></a>
-        <a href="#about" title="About" data-aos="fade-right" data-aos-delay="350"><i class="ri-information-line"></i><span class="link-text">About</span></a>
-        <a href="#skills" title="Skills" data-aos="fade-right" data-aos-delay="450"><i class="ri-medal-line"></i><span class="link-text">Skills</span></a>
-        <a href="#projects" title="Projects" data-aos="fade-right" data-aos-delay="550"><i class="ri-folder-image-line"></i><span class="link-text">Projects</span></a>
-        <a href="#contact" title="Contact" data-aos="fade-right" data-aos-delay="650"><i class="ri-contacts-line"></i><span class="link-text">Contact</span></a>
-      </nav>
-    </aside>
+  <div class="wrapper">
+    <nav>
+      <div class="logo">JK</div>
+      <div class="menu-btn" id="menu-btn">☰</div>
 
-    <!-- Home Section -->
-    <section id="home" class="section light" data-aos="fade-zoom-in" data-aos-duration="1000">
-      <div class="scroll-text">⏏Scroll Down</div>
-      <div class="section-content">
-        <h1 class="section-titleH" data-aos="fade-up" data-rellax-speed="-2"><span style="color: transparent; -webkit-text-stroke: 0.8px #ff6000; font-size: 1.5rem; position: relative; top: -28px; ">I'm</span> JISHNU</h1>
-        <p class="section-desc" data-aos="fade-up" data-aos-delay="200" data-rellax-speed="-1">"Standing on the shoulders of early innovators in electronics to reach for a future of bio-integrated devices." </p>
-        <a href="#projects" class="section-btn" data-aos="zoom-in" data-aos-delay="400" >Explore Projects</a>
-      </div>
-      <div class="section-img">
-        <spline-viewer url="https://prod.spline.design/1zgRbPzOABemGQUb/scene.splinecode"></spline-viewer>
-      </div>
-    </section>
-
-  <!-- About Section -->
-    <section id="about" class="section dark" data-aos="fade-up" data-aos-duration="1000" data-aos-offset="200">
-      <div class="section-img" data-aos="zoom-in" data-aos-delay="300" data-rellax-speed="2">
-        <img src="images/About-img.png" alt="About Image" class="about-image" style="width: fit-content;">
-      </div>
-      <div class="section-content">
-        <h2 class="section-title" data-aos="zoom-in-up" data-rellax-speed="-1">About Me</h2>
-        <div class="section-desc">
-          <p data-aos="fade-right" data-aos-delay="200">
-            "I am a dedicated Applied Electronics and Instrumentation student at Government Engineering College, Kozhikode (GECK), with a passion for bridging the gap between hardware and software.
-            My work is driven by a desire to create innovative solutions for real-world problems. 
-            I've engineered a smart door lock system with facial recognition and am currently developing a drone-based vehicle detection system.
-            I am constantly exploring new technologies to build meaningful and efficient tech experiences."
-          </p>
+        <div class="side-nav">
+            
+            <a href="#home"     class="side-nav-item active" data-label="Home">
+            <div class="side-nav-circle"><i class="fa-solid fa-house"></i></div>
+            <span class="side-nav-label">Home</span>
+            </a>
+            <a href="#about"    class="side-nav-item" data-label="About">
+            <div class="side-nav-circle"><i class="fa-solid fa-user"></i></div>
+            <span class="side-nav-label">About</span>
+            </a>
+            <a href="#skills"   class="side-nav-item" data-label="Skills">
+            <div class="side-nav-circle"><i class="fa-solid fa-bolt"></i></div>
+            <span class="side-nav-label">Skills</span>
+            </a>
+            <a href="#projects" class="side-nav-item" data-label="Projects">
+            <div class="side-nav-circle"><i class="fa-solid fa-diagram-project"></i></div>
+            <span class="side-nav-label">Projects</span>
+            </a>
+            <a href="#contact"  class="side-nav-item" data-label="Contact">
+            <div class="side-nav-circle"><i class="fa-solid fa-envelope"></i></div>
+            <span class="side-nav-label">Contact</span>
+            </a>
         </div>
-        <a href="#contact" class="section-btn" data-aos="zoom-in-left" data-aos-duration="500" data-aos-offset="200">Contact Me</a>
-        <a href="#projects" class="section-btn" data-aos="zoom-in-right" data-aos-duration="500" data-aos-offset="200">Explore My Work</a>
-      </div>
-    </section>
+      
+    </nav>
 
-    <!-- Skills Section -->
-    <section id="skills" class="section light" data-aos="fade-up" data-aos-offset="250">
-      <div class="skills-experiences-wrapper">
+        <section class="hero" id="home">
+            <div>
+                <h1 id="hero-name">Loading...</h1>
+                <p id="hero-desc"></p>
+                <div class="stats">
+                    <a href="#projects" class="stat"><h2 id="stat-projects">0 <span>Projects</span></h2></a>
+                    <a href="#skills" class="stat"><h2 id="stat-skills">0 <span>Skills</span></h2></a>
+                    <a href="#contact" class="stat arrow"><h2>Get <span>in touch</span> →</h2></a>
+                </div>
+            </div>
+            <img id="hero-image" alt="Hero Image">
+        </section>
+
+
         
-        <div class="section-content" data-aos="zoom-out-right" data-aos-offset="300">
-          <h2 class="section-title" data-aos="fade-down">Skills</h2>
-          <div id="skills-section-placeholder" data-aos="fade-up" data-aos-delay="200"></div>
-          <br>
-          <a href="#projects" class="section-btn" data-aos="flip-up" data-aos-duration="600" data-aos-delay="250">
-            Ready to Explore?
-          </a>
-        </div>
-        <div class="section-content" data-aos="zoom-out-left" data-aos-offset="300">
-          <h2 class="section-title" data-aos="fade-down">Experiences</h2>
-          <div id="experience-section-placeholder" data-aos="fade-up" data-aos-delay="200"></div> 
-        </div>
-      </div>
-    </section>
+        <h2>About Me</h2>
+        <section class="about-split" id="about">
+            <div class="about-text">
+                <h2 id="about-title"></h2>
+                <p id="about-text"></p>
+            </div>
+            <div class="about-image">
+                <img id="about-pic" alt="About Me Picture">
+            </div>
+        </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="section dark" data-aos="fade-up" data-aos-offset="320">
-      <h2 class="section-title" data-aos="fade-up">Projects</h2>
-      <div id="project-section-placeholder" data-aos="fade-up" data-aos-delay="200"></div>
-      <script src="subfiles/prjt.js"></script>
-    </section>
+        <section class="skills-exp" id="skills">
+            <div class="skills">
+                <h2>Skills</h2>
+                <div class="skill-grid" id="skill-container"></div>
+            </div>
+            <div class="experience" id="exp-container">
+                <h2>Experience</h2>
+            </div>
+        </section>
 
-    <!-- Contact Section -->
-    <section class="section light contact-center" id="contact" data-aos="fade-up" data-aos-duration="800">
-      <div class="section-content">
-        <h2 class="section-title" data-aos="fade-up" data-aos-delay="100">Contact</h2>
-        <p class="section-desc" data-aos="fade-up" data-aos-delay="200">Curious about something or want to team up? Say hi!</p>
-        <a href="mailto:jishnuoffical5@gmail.com" class="section-btn" data-aos="zoom-in" data-aos-delay="300">Email Me</a>
-        <div class="spacer-sm"></div>
-        <a href="resume.pdf" class="section-btn" download data-aos="zoom-in" data-aos-delay="400">Peek at My Resume</a>
-        <div class="spacer-sm"></div>
-        <!-- Social Media Icons -->
-        <div class="icons" data-aos-offset="50" data-aos="fade-up">
-          <a href="https://www.instagram.com/j_shnu?igsh=MW54bXg5NGRtZW10ZA==" target="_blank" rel="noopener noreferrer" class="icon icon--instagram" aria-label="Instagram" data-aos-offset="50" data-aos="fade-up" data-aos-delay="250" >
-            <i class="ri-instagram-line"></i>
-          </a>
-          <a href="https://www.linkedin.com/in/jishnu-k-6b7024255" target="_blank" rel="noopener noreferrer" class="icon icon--linkedin" aria-label="LinkedIn"  data-aos-offset="50" data-aos-delay="350" data-aos="fade-up">
-            <i class="ri-linkedin-line"></i>
-          </a>
-          <a href="https://github.com/Jishnu314" target="_blank" rel="noopener noreferrer" class="icon icon--github" aria-label="GitHub" data-aos-offset="50" data-aos-delay="450" data-aos="fade-up" >
-            <i class="ri-github-line"></i>
-          </a>
-          <!--
-          <a href="https://www.reddit.com/u/Flashy_Constant_6448/s/zKh5tZSENe" target="_blank" rel="noopener noreferrer" class="icon icon--reddit" aria-label="Reddit" data-aos-delay="450" data-aos="fade-up">
-            <i class="ri-reddit-line"></i>
-          </a>-->
-        </div>
-      </div>
-    </section>
 
-    <!--Footer-->
-    <footer class="footer" style="text-align:center; padding: 1rem 0; background: #ffffff; color: #000000;">
-      &copy; 2025 Jishnu. All rights reserved.
-    </footer>
 
-      <!---JavaScripts-->
-    <script src="script.js"></script><!-- java -->
-    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script> <!-- Iconify JS -->
-    <script src="https://cdn.jsdelivr.net/npm/rellax@1.12.1/rellax.min.js"></script> <!-- Rellax JS -->
-    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>  <!-- AOS JS -->
-    <script type="module" src="https://unpkg.com/@splinetool/viewer@1.10.32/build/spline-viewer.js"></script>
-    <script>
-      // Initialize AOS
-      AOS.init({
-        duration: 800, // Animation duration
-        offset: 200, // Offset (in px) from the original trigger points
-      });
-      // Initialize Rellax for parallax effect
-      var rellax = new Rellax('.rellax', {
-        speed: -2, // Speed of the parallax effect
-        easing: 'ease-in-out', // Easing function for the parallax effect
-        center: true, // Center the elements
-        mirror: false, // Disable mirroring
-        round: true, // Round the positions to integers 
-        vertical: true, // Enable vertical parallax
-        horizontal: false // Disable horizontal parallax
-      });
-    </script>
-  </body>
+        <h2>Projects</h2>
+        <section class="projects" id="projects">
+            <div class="project-list" id="project-container"></div>
+            <div>
+                <div class="project-image">
+                    <img id="preview" alt="Project Preview">
+                </div>
+                <div class="progress"><span id="bar"></span></div>
+            </div>
+        </section>
+            
+        
 
+        <section class="contact" id="contact">
+            <h2>Contact</h2>
+            <p class="subtitle">Curious about something or want to team up? Say hi!</p>
+            
+            <div class="contact-actions">
+                <a id="email-btn" href="#" class="btn-outline">Email Me</a>
+                <a id="resume-btn" href="#" class="btn-outline">Peek at My Resume</a>
+            </div>
+
+            <div class="socials" id="social-container"></div>
+
+            <footer class="footer-v2">
+                © 2025 <span id="footer-name">Jishnu</span>. All rights reserved.
+            </footer>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    
+
+
+</body>
 </html>
-
-
