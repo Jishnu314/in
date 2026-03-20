@@ -12,8 +12,8 @@
 
 <br/>
 
-![Portfolio Preview](https://github.com/user-attachments/assets/eae5a0e1-d09a-4675-8f29-2c833f9264c9)
-<img width="1500" height="865" alt="image" src="https://github.com/user-attachments/assets/d8d1a180-a10d-4d95-8cbf-722c315aa8cc" />
+![Portfolio Preview](https://github.com/user-attachments/assets/d8d1a180-a10d-4d95-8cbf-722c315aa8cc)
+
 
 
 </div>
