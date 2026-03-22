@@ -8,6 +8,9 @@
     {"name": "Inkscape", "iconify": "simple-icons:inkscape"},
     {"name": "Assembly Language", "iconify": "simple-icons:assemblyscript"},
     {"name": "MATLAB", "iconify": "devicon-plain:matlab" },
-    {"name": "Proteus", "iconify": "simple-icons:proteus" } 
-  ]
+    {"name": "Proteus", "iconify": "simple-icons:proteus" },
+    {"name": "LTspice ", "iconify": "simple-icons:ltspice"},
+    {"name": "RSLogix 500 ", "iconClass": "fas fa-cogs"},
+    {"name": "CODESYS", "iconClass": "fas fa-cubes"}
+]
 
