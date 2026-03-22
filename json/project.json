@@ -15,7 +15,7 @@
   },
   {
     "title": "Smart Specs For Blind (In Progress)",
-    "tags": "Rpi · Python",
+    "tags": "Rpi · Python · MediaPipe · MobileFaceNet · YOLO ",
     "desc": "Assistive smart spectacles for visually impaired users that use object detection to recognize surroundings in real time. Converts visual information into audio feedback, helping users navigate safely, avoid obstacles, and understand their environment independently.",
     "features": ["Face recognition", "AI assistance", "Smart shop assistant", "Emergency call"],
     "image": "images/Smart specs.png",
